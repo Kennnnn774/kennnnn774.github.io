@@ -1,35 +1,100 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Main from './layouts/Main'; // fallback for lazy pages
-import './static/css/main.scss'; // All of our styles
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import {
+  navBar,
+  mainBody,
+  about,
+  repos,
+  leadership,
+  skills,
+  getInTouch,
+  experiences
+} from "./editable-stuff/config.js";
+import MainBody from "./components/home/MainBody";
+import AboutMe from "./components/home/AboutMe";
+import Project from "./components/home/Project";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Skills from "./components/home/Skills";
+// import { Blog } from "./components/blog/Blog";
+// import BlogPost from "./components/blog/BlogPost";
+import GetInTouch from "./components/home/GetInTouch.jsx";
+import Leadership from "./components/home/Leadership.jsx";
 
-const { PUBLIC_URL } = process.env;
+import Experience from "./components/home/Experience";
 
-// Every route - we lazy load so that each page can be chunked
-// NOTE that some of these chunks are very small. We should optimize
-// which pages are lazy loaded in the future.
-const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Index = lazy(() => import('./pages/Index'));
-const NotFound = lazy(() => import('./pages/NotFound'));
-const Projects = lazy(() => import('./pages/Projects'));
-const Resume = lazy(() => import('./pages/Resume'));
-const Stats = lazy(() => import('./pages/Stats'));
+const Home = React.forwardRef((props, ref) => {
+  return (
+    <>
+      <MainBody
+        gradient={mainBody.gradientColors}
+        title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
+        message={mainBody.message}
+        icons={mainBody.icons}
+        ref={ref}
+      />
+      {about.show && (
+        <AboutMe
+          heading={about.heading}
+          message={about.message}
+          link={about.imageLink}
+          imgSize={about.imageSize}
+          resume={about.resume}
+        />
+      )}
+      {
+        experiences.show && (
+          <Experience experiences={experiences}/>
+        )
+      }
+      {repos.show && (
+        <Project
+          heading={repos.heading}
+          username={repos.gitHubUsername}
+          length={repos.reposLength}
+          specfic={repos.specificRepos}
+        />
+      )}
+      {leadership.show && (
+        <Leadership
+          heading={leadership.heading}
+          message={leadership.message}
+          img={leadership.images}
+          imageSize={leadership.imageSize}
+        />
+      )}
+      {skills.show && (
+        <Skills
+          heading={skills.heading}
+          hardSkills={skills.hardSkills}
+          softSkills={skills.softSkills}
+        />
+      )}
+      
+    </>
+  );
+});
 
-const App = () => (
-  <BrowserRouter basename={PUBLIC_URL}>
-    <Suspense fallback={<Main />}>
-      <Switch>
-        <Route exact path="/" component={Index} />
-        <Route path="/about" component={About} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/stats" component={Stats} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/resume" component={Resume} />
-        <Route component={NotFound} status={404} />
-      </Switch>
-    </Suspense>
-  </BrowserRouter>
-);
+const App = () => {
+  const titleRef = React.useRef();
+
+  return (
+    <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
+      {navBar.show && <Navbar ref={titleRef} />}
+      <Route path="/" exact component={() => <Home ref={titleRef} />} />
+      {/* {false && <Route path="/blog" exact component={Blog} />}
+      {false && <Route path="/blog/:id" component={BlogPost} />} */}
+      <Footer>
+        {getInTouch.show && (
+          <GetInTouch
+            heading={getInTouch.heading}
+            message={getInTouch.message}
+            email={getInTouch.email}
+          />
+        )}
+      </Footer>
+    </BrowserRouter>
+  );
+};
 
 export default App;

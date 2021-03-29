@@ -1,19 +1,12 @@
-import React from 'react';
-import { hydrate, render } from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./scss/custom.scss";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-// See https://reactjs.org/docs/strict-mode.html
-const StrictApp = () => (
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 
-const rootElement = document.getElementById('root');
-
-// hydrate is required by react-snap.
-if (rootElement.hasChildNodes()) {
-  hydrate(<StrictApp />, rootElement);
-} else {
-  render(<StrictApp />, rootElement);
-}
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
