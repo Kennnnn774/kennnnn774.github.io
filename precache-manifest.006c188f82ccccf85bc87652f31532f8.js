@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d6e172c59ec6af46669a6ad2e20b17e",
+    "revision": "8a61bb3e380888e0c5f32ddc50966221",
     "url": "/index.html"
   },
   {
-    "revision": "9cde1262b4680193376e",
+    "revision": "1162f9e4098551d336c2",
     "url": "/static/css/main.956fad23.chunk.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.19e99e5d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9cde1262b4680193376e",
-    "url": "/static/js/main.3e0f3ed9.chunk.js"
+    "revision": "1162f9e4098551d336c2",
+    "url": "/static/js/main.5a92ead8.chunk.js"
   },
   {
     "revision": "f52ba179432c3be28857",
     "url": "/static/js/runtime-main.554504a0.js"
   },
   {
-    "revision": "32f6b574eb11519020e24620a38bdf55",
-    "url": "/static/media/hashirshoaeb.32f6b574.png"
+    "revision": "ff90ea88c84b0484ee466bdb9c1845ee",
+    "url": "/static/media/ken_suit.ff90ea88.jpg"
   },
   {
     "revision": "9d3da0e22086c40d5e3106d01c0f6402",
