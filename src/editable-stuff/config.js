@@ -68,7 +68,9 @@ const repos = {
   heading: "Recent Projects",
   gitHubUsername: "Kennnnn774", //i.e."johnDoe12Gh"
   reposLength: 0,
-  specificRepos: ["Political-Preference-in-Covid-19","clothing-fit-classification","snapchat-political-ads",,"California-Climate-Change-Visualization","SQL-project","kennnnn774.github.io"],
+  specificRepos: ["Political-Preference-in-Covid-19","clothing-fit-classification",
+  "snapchat-political-ads","California-Climate-Change-Visualization",
+  "SQL-project","kennnnn774.github.io"],
 };
 
 // Leadership SECTION
