@@ -17,11 +17,9 @@ const Footer = (props) => {
         >
           Kennnnn774
         </a>{" "}
-        using <i className="fab fa-react" />
         <p>
           <small className="text-muted">
-            Project code is open source. Feel free to fork and make your own
-            version.
+            The Project in my Github is open source.
           </small>
         </p>
       </Container>

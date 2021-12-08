@@ -6,7 +6,7 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Yujian(Ken)",
+  firstName: "Yujian",
   middleName: "",
   lastName: "He",
   message: " Passionate about changing the world with technology. ",
@@ -54,8 +54,8 @@ const about = {
   imageLink: require("../editable-stuff/ken_suit.jpg"),
   imageSize: 375,
   message:
-    "My name is Yujian(Ken) He. I am a junior student double majoring in data science and management science at University of California, San Diego.  I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of data science.",
-  resume: "https://docs.google.com/document/d/1NKBi2-FlhxM4R62aRSmq1svlNKaHpqJRcxHzyUw0LRY/edit?usp=sharing",
+    "Hi, my name is Yujian He. I am a senior student double majoring in data science and management science at UCSD. I specialize in exploratory data analysis, data visualization, deep learning, and machine learning. I am working as a data science intern at Hove Social Good Intelligence, an Undergraduate Teaching Assistant for the DS department at UCSD. A strong believer in the performance of teams and my cross-domain expertise allow me to significantly add value to a team in multiple ways.",
+  resume: require("../editable-stuff/resume.pdf"),
 };
 
 // PROJECTS SECTION
@@ -68,9 +68,9 @@ const repos = {
   heading: "Recent Projects",
   gitHubUsername: "Kennnnn774", //i.e."johnDoe12Gh"
   reposLength: 0,
-  specificRepos: ["Political-Preference-in-Covid-19","clothing-fit-classification",
+  specificRepos: ["Autonomous-vehicle-motion-forecasting","Political-Preference-in-Covid-19","clothing-fit-classification",
   "snapchat-political-ads","California-Climate-Change-Visualization",
-  "SQL-project","kennnnn774.github.io"],
+  "SQL-project"],
 };
 
 // Leadership SECTION
@@ -108,7 +108,7 @@ const skills = {
     { name: "Java", value: 75 },
     { name: "JavaScript", value: 75 },
     { name: "Stata", value: 85 },
-    { name: "HTML/CSS", value: 80 },
+    { name: "AWS", value: 80 },
     { name: "R", value: 75 },
   ],
   softSkills: [
@@ -128,24 +128,44 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for summer intern data scientist or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "easyjiajob@gmail.com",
+    "I'm currently looking for summer intern data scientist or SWE opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  email: "kenyjhe@gmail.com",
 };
 
 const experiences = {
-  show: false,
+  show: true,
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
+      role: 'Data Science Team Intern',// Here Add Company Name
+      companylogo: require('../assets/img/heysocialgood.png'),
+      date: 'Mar 2021 – Present',
     },
     {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      role: 'Undergraduate Teaching Assistant',
+      companylogo: require('../assets/img/HDSI.png'),
+      date: 'Sep 2021 – Present',
     },
+    {
+      role: 'Minister of Event Coordinate Department',
+      companylogo: require('../assets/img/CBS.png'),
+      date: 'Jan 2019 – Oct 2021',
+    },
+    {
+      role: 'Undergraduate Instructional Assistant',
+      companylogo: require('../assets/img/UCSDECON.png'),
+      date: 'Jan 2021 – Jun 2021',
+    },
+    {
+      role: 'Machine Learning Intern',
+      companylogo: require('../assets/img/Calit2.png'),
+      date: 'Mar 2021 – Jun 2021',
+    },
+    {
+      role: 'Research Intern',
+      companylogo: require('../assets/img/Qual.png'),
+      date: 'Mar 2021 – Jun 2021',
+    }
   ]
 }
 
