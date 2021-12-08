@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.956fad23.chunk.css",
+    "main.js": "/static/js/main.63519fdd.chunk.js",
+    "main.js.map": "/static/js/main.63519fdd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.554504a0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.554504a0.js.map",
+    "static/js/2.25efede7.chunk.js": "/static/js/2.25efede7.chunk.js",
+    "static/js/2.25efede7.chunk.js.map": "/static/js/2.25efede7.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f42f5264a5e8da0d8e51065f40d17bff.js": "/precache-manifest.f42f5264a5e8da0d8e51065f40d17bff.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.956fad23.chunk.css.map": "/static/css/main.956fad23.chunk.css.map",
+    "static/js/2.25efede7.chunk.js.LICENSE.txt": "/static/js/2.25efede7.chunk.js.LICENSE.txt",
+    "static/media/CBS.png": "/static/media/CBS.ad88d112.png",
+    "static/media/ken_suit.jpg": "/static/media/ken_suit.4cac4984.jpg",
+    "static/media/resume.pdf": "/static/media/resume.e05a4fc5.pdf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.554504a0.js",
+    "static/js/2.25efede7.chunk.js",
+    "static/css/main.956fad23.chunk.css",
+    "static/js/main.63519fdd.chunk.js"
+  ]
+}
